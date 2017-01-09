@@ -2,6 +2,6 @@
 
 ## About
 
-![Example Application Usage](readme_images/landing-kiki-5.png)
+![](readme_images/landing-kiki-5.png)
 
 Prototype/proof of concept for an English as a Second Language (ESL) podcast/web application.
