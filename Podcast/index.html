@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="English Learning Podcasts">
+		<meta name="author" content="Manabi">
+		<link rel="icon" href="../Assets/img/global/favicon.ico">
+	
+		<title>kikiTORA Podcast</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../Assets/external/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- Font Awesome - Icons -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<!-- Web Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:700italic,700,300,400' rel='stylesheet' type='text/css'>
+	
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		
+	
+		
+		<!-- Global & /podcast layout styles. -->
+		<link rel="stylesheet" href="../Assets/css/global.css">
+		<link rel="stylesheet" href="../Assets/css/typography.css">
+		<link rel="stylesheet" href="../Assets/css/layout-podcast.css">
+		
+		<!-- Header -->
+		<link rel="stylesheet" href="../Assets/css/header.css">
+		
+		<!-- Nav -->
+		<link rel="stylesheet" href="../Assets/css/navigation.css">
+		
+		<!-- Timeline -->
+		<link rel="stylesheet" href="../Assets/css/timeline-header.css">
+		<link rel="stylesheet" href="../Assets/css/series-menu.css">
+		<link rel="stylesheet" href="../Assets/css/timeline.css">
+		
+		<!-- Sidebar -->
+		<link rel="stylesheet" href="../Assets/css/sidebar-header.css">
+		<link rel="stylesheet" href="../Assets/css/sidebar.css">
+		
+		<!-- Footer -->
+		<link rel="stylesheet" href="../Assets/css/footer.css">
+		
+		<!-- Mobile Styles -->
+		<link rel="stylesheet" href="../Assets/css/mobile-sidebar.css">
+		<link rel="stylesheet" href="../Assets/css/mobile-dropdown.css">
+		
+		<!-- Various styles for components -->
+		<link rel="stylesheet" href="../Assets/css/components/ul.css">
+		
+		<!-- Elements added via JS -->
+		<link rel="stylesheet" href="../Assets/css/js-autoscroll.css">
+		<link rel="stylesheet" href="../Assets/css/js-menu-languageselector.css">
+	</head>
+	
+	<body>
+		
+		<!-- Audio for the podcast. -->
+		<audio id="audio">
+			<!-- Using weblink so that I can test buffering/etc. -->
+			<source src="../Assets/audio/PutUpWith.mp3" type="audio/mpeg"></source>
+		</audio>
+		
+		<!-- Top Header -->
+		<div class="wrap blue-bg">
+			<div id="top" class="container">
+				
+				<div class="row table-row">
+					<div class="col-xs-6 table-column">
+						<div class="kikitora">
+							<h1>kikiTORA</h1>
+							<div class=" language-selector hidden-xs">
+								<img class="language" src="../Assets/img/global/language-JAPAN.png"><span class="fa fa-caret-down"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 table-column text-right">
+						<div id="mobile-dropdown" class="visible-xs"><span id="mobile-menu-button" class="fa fa-bars"></span></div>
+					</div>
+				</div>
+			
+				<!-- Dropdown menu for mobile -->
+				<div class="row" style="position: relative;">
+					<div id="mobile-drop-down" class="col-xs-12 visible-xs">
+						
+						<div id="navigation">
+							<h1><span class="fa fa-compass">&nbsp;</span>Navigation</h1>
+							<ul class="connected">
+								<li>Home</li>
+								<li>Podcasts</li>
+								<li>Festivals</li>
+								<li class="active">Sapporo Yuki Matsuri</li>
+							</ul>
+						</div>
+						
+						<div id="mobile-settings">
+							<h1><span class="fa fa-cog">&nbsp;</span>Settings</h1>
+							
+							<!-- Autoscroll Setting -->
+							<div id="autoscroll-mobile" class="mobile-setting">
+								<div class="setting-name"><h2>auto-scroll</h2></div>
+								<div class="setting-indicator">
+									<span class="fa-stack fa-lg">
+									  <i class="fa fa-circle-thin fa-stack-2x"></i>
+									  <i id="autoscroll-check-mobile" class="fa fa-check fa-stack-1x fa-inverse"></i>
+									</span>
+								</div>
+							</div>							
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div> <!-- / Top header -->
+		
+		<!-- Main content row -->
+		<div id="content" class="container">
+			
+			<!-- Everything is on one row, but the right hand column has two rows. One for the header information and one for the actual content. -->
+			<div class="row">
+				
+				<!-- left column -->
+				<div class="col-sm-1 hidden-xs navigation-column">
+					
+					<!-- Left hand navigation -->
+					<ul id="main-nav">
+						<!-- Play button that appears when scrolled -->
+						<li id="secondary-play-button" class="hidden">
+							<i class="fa fa-play"></i>
+							<div id="nav-progress-bg">
+								<div id="nav-progress"></div>
+							</div>
+						</li>
+						
+						<!-- Links - Need to update these -->
+						<a href="http://www.kikitora.com/home">
+							<li><i class="fa fa-home"></i></li>
+						</a>
+						<a href="http://www.kikitora.com/library">
+							<li><i class="fa fa-th-large"></i></li>
+						</a>
+						<a href="#">
+							<li class="active"><i class="fa fa-rss"></i></li>
+						</a>
+						<!-- Flashcards -->
+						<!-- <li class="attention"><i class="fa fa-tag"></i></li> -->
+						<a href="http://www.kikitora.com/flashcards">
+							<li><i class="fa fa-tag"></i></li>
+						</a>
+					</ul>
+					
+				</div>
+				
+				<!-- right column -->
+				<div class="col-sm-11 main-content-column">
+					
+					<!-- header row -->
+					<div class="row table-row">
+						
+						<!-- podcast head/controls column -->
+						<div class="col-xs-8 table-column col-xs-12-table-column">
+							<div id="podcast-info">
+								<!-- podcast season image -->
+								<img class="background" src="../Assets/img/podcast/bg/lanterns.jpg">
+								
+								<div class="padding">
+									<h2 class="series-number">HOME > PODCASTS > FESTIVALS #7 <span class="fa fa-caret-down"></span></h2>
+									<h1>SAPPORO YUKI MATSURI</h1>
+									<p>The Sapporo Snow Festival (Sapporo Yuki Matsuri) is held during one week every February in Hokkaido's capital Sapporo. It is one of Japan's most popular winter events.</p>
+									
+									<div id="html-audio-controls" class="controls">
+										<div id="main-play-button"></div>
+										<div id="stats">
+											<span id="playtime" class="current-label"></span>
+											<span id="separator" class="separator">&#47;</span>
+											<span id="duration" class="duration-label">loading <span class="fa fa-cog fa-spin"></span></span>
+											<div id="progress-bar">			
+												<div id="buffered-bar" progress="0%"></div>
+												<div id="completion-bar" progress="0%"></div>
+											</div>
+											<div class="hidden" id="progress-tooltip"></div>
+										</div>
+									</div> <!-- /html-audio-controls -->
+									
+								</div> <!-- /padding, eeep -->
+								
+								
+								<div id="podcast-settings" class="hidden-xs">
+									
+									<div id="autoscroll-pc" class="setting-wrapper noselect">
+										<div class="setting">
+											auto-scroll
+										</div><!--
+									 --><div class="last"><span id="autoscroll-check-pc" class="fa fa-check"></span></div>
+									</div>
+									
+									<!-- play-speed setting for later -->
+									<!-- 
+									<div class="setting-wrapper">
+										<div id="playspeed" class="setting">
+											play-speed
+										</div><!--
+									 --><!-- <div class="mid">0.5</div><!--
+									 --><!-- <div class="mid">1</div><!--
+									 --><!-- <div class="mid selected">1.5</div><!--
+									 --><!-- <div class="last">2</div>
+									</div>
+									-->
+
+								</div>
+								
+							</div> <!-- /article info -->
+						</div> <!-- /left hand column -->
+						
+						<!-- sidebar head column -->
+						<div id="sidebar-header" class="col-xs-4 hidden-xs table-column">
+							<div id="sidebar-menu">
+								<img src="../Assets/img/podcast/icons/comment-bubble.png">
+								<h1>Vocabulary</h1>
+							</div>
+						</div>
+						
+					</div>
+					
+					<!-- main content row -->
+					<div class="row table-row">
+						
+						<!-- podcast content column -->
+						<div class="col-xs-8 table-column col-xs-12-table-column">
+							
+							<!-- LINE BY LINE -->
+							<div id="line-container" class="loading">
+								<!-- Line 1 -->
+								<div class="line" timestamp="0.00">
+									<div class="details">
+										<span class="time">0:00</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">
+											<span class="timeline-word" word-id="1">Hello</span> 
+											and 
+											<span class="timeline-word" word-id="2">welcome</span> 
+											to 
+											<span class="timeline-word" word-id="3">another</span> 
+											<span class="timeline-word" word-id="4">one</span> 
+											<span class="timeline-word" word-id="5">minute</span> 
+											<span class="timeline-word" word-id="6">English</span> 
+											<span class="timeline-word" word-id="6">Supercharge.</span> 
+										</p>
+									</div>
+								</div>
+								
+								<!-- Line 2 -->
+								<div class="line" timestamp="4.93">
+									<div class="details">
+										<span class="time">0:05</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">Today's phrase is "<span class="timeline-word" word-id="7">put</span> <span class="timeline-word" word-id="7">up</span> <span class="timeline-word" word-id="7">with</span>".</p>
+									</div>
+								</div>
+								
+								<!-- Line 3 -->
+								<div class="line" timestamp="7.35">
+									<div class="details">
+										<span class="time">0:07</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech"><span class="timeline-word" word-id="7">Put</span> <span class="timeline-word" word-id="7">up</span> <span class="timeline-word" word-id="7">with</span> means to accept or tolerate something, usually something that's bad.</p>
+									</div>
+								</div>
+								
+								<!-- Line 4 -->
+								<div class="line" timestamp="13.77">
+									<div class="details">
+										<span class="time">0:14</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">For example: my brother is really annoying when we eat dinner.</p>
+									</div>
+								</div>
+								
+								<!-- Line 5 -->
+								<div class="line" timestamp="18.18">
+									<div class="details">
+										<span class="time">0:18</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">He'll push food around his plate, make weird noises. </p>
+									</div>
+								</div>
+								
+								<!-- Line 6 -->
+								<div class="line" timestamp="23.90">
+									<div class="details">
+										<span class="time">0:23</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">I hate <span class="timeline-word" word-id="7">putting</span> <span class="timeline-word" word-id="7">up</span> <span class="timeline-word" word-id="7">with</span> him.</p>
+									</div>
+								</div>
+								
+								<!-- Line 7 -->
+								<div class="line" timestamp="26.83">
+									<div class="details">
+										<span class="time">0:26</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">But my mother always used to say to us: </p>
+									</div>
+								</div>
+								
+								<!-- Line 8 -->
+								<div class="line" timestamp="30.54">
+									<div class="details">
+										<span class="time">0:30</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">"You'll just have to <span class="timeline-word" word-id="7">put</span> <span class="timeline-word" word-id="7">up</span> <span class="timeline-word" word-id="7">with</span> each other!"</p>
+									</div>
+								</div>
+								
+								<!-- Line 9 -->
+								<div class="line" timestamp="32.95">
+									<div class="details">
+										<span class="time">0:33</span>
+										<img src="../Assets/img/users/user.gif" alt="VA">
+									</div>
+									<div class="text">
+										<p class="speech">So there it is, today's phrase "<span class="timeline-word" word-id="7">put</span> <span class="timeline-word" word-id="7">up</span> <span class="timeline-word" word-id="7">with</span>", to tolerate or accept something.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<!-- sidebar vocab column -->
+						<div id="vocab" class="col-xs-4 hidden-xs sidebar-column table-column ">
+							<div id="hint">
+								<p class="hint"><span class="fa fa-lightbulb-o fa-lg"></span> HINT</p>
+								<p>Click words to see definitions!</p>
+							</div>
+							
+							<!-- These are added via JS.
+							<div class="word-container" word-id="1">
+								<div class="number-column">
+									<h1>1</h1>
+								</div>
+								<div class="word">
+									<div class="pos">noun</div>
+									<div class="english">snow</div><span> ⇋ </span><div class="japanese">雪</div>
+									<div class="meaning">atmospheric water vapour frozen into ice crystals and falling in light white flakes or lying on the ground as a white layer</div>
+								</div>
+							</div>
+							-->
+							
+						</div> <!-- /sidebar vocab column -->
+					</div> <!-- /timeline row -->
+				</div> <!-- /right column -->
+			</div> <!-- /main content row -->
+		</div> <!-- /container -->
+		
+		<!-- Footer -->
+		<div class="wrap">
+			<div id="footer" class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1>footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- vocab popup menu for mobile -->
+		<div class="container visible-xs">
+			<div class="row">
+				<div id="mobile-vocab" class="col-xs-12">
+					
+					<!-- Added via JS
+					<div class="word-container">
+						<div class="number-column">
+							<h1>1</h1>
+						</div>
+						<div class="word">
+							<div class="pos">noun</div>
+							<div class="english">snow</div><span> ⇋ </span><div class="japanese">雪</div>
+							<div class="meaning">atmospheric water vapour frozen into ice crystals and falling in light white flakes or lying on the ground as a white layer</div>
+						</div>
+					</div>
+					-->
+						
+				</div>
+			</div>
+		</div>
+			
+	</body>
+	
+	<!-- Utility functions -->
+	<script src="../Assets/js/utility/utility.js"></script>
+	
+	<!-- Timeline Scripts -->
+	<script src="../Assets/js/timeline/timeline_audio.js"></script>
+	<script src="../Assets/js/timeline/timeline_controller.js"></script>
+	<script src="../Assets/js/timeline/auto-scroll.js"></script>
+	<script src="../Assets/js/timeline/word-clicks.js"></script>
+
+	<!-- Menus -->
+	<script src="../Assets/js/menus/menu.js"></script>
+
+	<!-- General -->	
+	<script src="../Assets/js/manabi-podcast.js"></script>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

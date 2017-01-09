@@ -1,0 +1,28 @@
+/* General styles */
+.blue-bg
+{
+	background-color: #00E1FF;
+}
+
+.pink-bg
+{
+	background-color: pink;
+}
+
+.red-bg
+{
+	background-color: #ff4444;
+}
+
+.hidden
+{
+	display: none;
+	opacity: 0;
+}
+
+/* add to body and html to disable scrolling whilst the word popup is active */
+.noscroll
+{
+	overflow: hidden;
+	height: 100%;
+}

@@ -1,0 +1,36 @@
+/* -sidebar head */
+	
+#sidebar-header
+{
+	position: relative;
+	background-color: #00e1ff;
+	color: white;
+	border-radius: 0px 5px 0px 0px;
+}
+	#sidebar-header img
+	{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#sidebar-header h1
+	{
+		padding-top: 0.5em;
+		vertical-align: middle;
+		font-size: 2em;
+		display: inline-block;
+	}
+
+#sidebar-header #sidebar-menu
+{
+	position: absolute;
+	bottom: 4em;
+	left: -2.8em;
+	vertical-align: middle;
+	z-index: 2;
+}
+
+#sidebar-menu img
+{
+	height: 5.4em;
+	width: 5.4em;
+}

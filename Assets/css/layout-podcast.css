@@ -1,0 +1,172 @@
+body, html
+{
+	height: 100%;
+}
+
+	body
+	{
+		font-size: 12px;
+		min-width: 767px;
+	}
+
+
+/* General responsive styles.*/
+/* We want desktop to be static, but we want mobile to be responsive. */
+
+/* Styles for pc - hd */
+@media (max-width: 10000px) 
+{
+	.container
+	{
+		width: 970px !important;	
+	}
+	body
+	{
+		font-size: 12px;	
+	}
+}
+
+/* Styles for pc - md */
+@media (max-width: 1199px) {
+	
+	.container
+	{
+		width: 970px !important;	
+	}
+	body
+	{
+		font-size: 12px;
+	}
+}
+
+/* Styles for pc - sm */
+@media (max-width: 991px) 
+{
+	body
+	{
+		font-size: 12px;
+	}
+	.container
+	{
+		width: 970px !important;	
+	}
+}
+
+/* Styles for mobile - xs */
+@media (max-width: 767px)
+{
+	body
+	{
+		font-size: 10px;
+		min-width: 310px;
+	}
+	
+	.container
+	{
+		width: 100% !important;
+		
+	}
+}
+
+/* Allows use to wrap a row in a div that takes up the entire browser. */
+/* Used for background purpose. */
+.wrap
+{
+	width: 100%;
+}
+
+
+
+/* PC STYLES */
+/* ==== HEADER ==== */
+
+/* To force columns to keep 100% height of the row. */
+/* Can't use responsive features of bootstrap when using this though. */
+#top .table-row
+{
+	min-width: 100%;
+	display: table;
+
+	margin: 0;
+}
+
+#top .table-column
+{
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
+	padding: 0;
+}
+
+
+
+/* ==== CONTENT ==== */
+
+/* General column styles.*/
+.navigation-column, .main-content-column, .sidebar-column
+{
+	margin-top: 3em;
+}
+
+#content .table-row
+{
+	min-width: 100%;
+	display: table;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#content .table-column
+{
+	display: table-cell;
+	float: none;
+	vertical-align: top;
+	padding: 0;
+}
+
+
+
+/* Layout for MOBILE */
+@media (max-width: 767px)
+{	
+	/* gets rid of a small gap between the table and the containing div */
+	#content .table-row::after, #content .table-row::before
+	{
+		display:none;
+	}
+	
+	#mobile-word-popup .row
+	{
+		margin: 0;
+	}
+	
+	.col-xs-12-table-column
+	{
+		width: 100%;
+	}
+	
+	.main-content-column
+	{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

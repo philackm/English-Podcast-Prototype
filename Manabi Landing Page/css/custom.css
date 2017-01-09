@@ -1,0 +1,947 @@
+body, html
+{
+	height: 100%
+}
+
+/* Sizes */
+body
+{
+	font-size: 14px;
+}
+
+h1
+{
+	font-size: 2.5em;
+}
+h2
+{
+	font-size: 1.5em;
+}
+h3
+{
+	font-size: 1.5em;
+}
+h4
+{
+	font-size: 1em;
+}
+h5
+{
+	font-size: 0.5em;
+}
+
+p
+{
+	font-size: 1.25em; 
+}
+
+/* h1 styles */
+h1
+{
+	font-family: "Montserrat";
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+
+/* Allows use to wrap a row in a div that takes up the entire browser. */
+/* Used for background purpose. */
+.wrap
+{
+	width: 100%;
+}
+
+
+/* ==== HEADER ==== */
+
+
+#top
+{
+	color: white;
+}
+
+#top .kikitora h1
+{
+	background-image: url("../img/waveform.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	text-transform: none;
+}
+
+#top .kikitora h1, #top .kikitora img 
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#top .kikitora img.brand
+{
+	width: 169px;
+	height: 83px;
+}
+
+#top .kikitora img.language
+{
+	width: 43px;
+	height: 28px;
+	
+	width: 3.5em;
+	height: 2.3em;
+	
+	margin-right: 10px;
+	margin-left: 10px;
+	
+	position: absolute;
+
+	top: 3em;
+	right: 2em;
+}
+
+#top .kikitora span
+{
+	position: absolute;
+	font-size: 1.5em;
+	top: 2.3em;
+	right: 1em;
+}
+
+#top .kikitora img.language:hover, #top .kikitora span:hover
+{
+	cursor: pointer;
+}
+
+#top h1
+{
+	font-family: "Montserrat";
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+	margin: 0;
+}
+
+#top h2
+{
+	font-family: "Montserrat";
+	letter-spacing: -1px;
+	font-size: 2.5em;
+	margin-top: 0;
+}
+
+#top p
+{
+	font-family: "Open Sans";
+	letter-spacing: -1px;
+	margin: 15px 0px;
+}
+
+#top button
+{
+	color: white;
+	background-color: transparent;
+	border-color: white;
+	border-width: 2px;
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 1.25em;
+	
+	padding: 0;
+	font-size: 2em;
+	
+	outline: 0;
+}
+
+#top button:active
+{
+	box-shadow: inset 0px 1px 4px rgba(74, 74, 74, 0.2);
+}
+
+#top .timeline-hangover
+{
+	position: absolute;
+}
+
+
+/* ==== FEATURES ==== */ 
+
+
+.feature 
+{
+	padding: 2em;	
+}
+
+.feature-wrap
+{
+	background-image: url("../img/word-bg-top.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+/* Centre align vertically */
+.feature .col-sm-6, .feature .col-md-6
+{
+	line-height: 100%;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.feature h2
+{
+	max-width: 90%;
+	display: inline-block;
+	font-size: 1.8em;
+}
+
+/* Images -  For layout testing TODO: Replace */
+.definition-image
+{
+	height: 20em;
+	width: auto;
+	margin: 0px auto;
+}
+
+.content-image
+{
+	height: 25em;
+	width: auto;
+}
+
+.images
+{
+	overflow: hidden;
+}
+
+.image-container
+{
+	overflow: scroll;
+	width: 1000px;
+	max-height: 25em;
+}
+
+/* image of the timeline for mobile */
+.timeline-image img
+{
+	width: 100%;
+}
+
+/* light headings */
+
+#features h1, #features h2
+{
+	color: #004E57;
+}
+
+#features h1
+{
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#features h2
+{
+	font-family: "Open Sans";
+	font-weight: 100;
+	letter-spacing: -1px;
+}
+
+
+/* ==== CURRENT PODCASTS ==== */
+
+
+#current
+{
+	background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0) 60%); 
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.current-bg
+{
+	background-color: #4A4A4A;
+	position: relative;
+	border-top: 1px solid #4A4A4A; 
+	
+	background-image: url("../img/word-bg-bottom.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.current-bg:before
+{
+	  content: " ";
+	  position: absolute;
+	  z-index: 1;
+	  top: 0px;
+	  left: 0px;
+	  right: 0px;
+	  bottom: 0px;
+	  //border-top: 1px solid rgba(255, 255, 255, 0.3); 
+	  height: 1px;
+
+	  
+	  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.3) 90%, transparent);
+}
+
+#current h1
+{
+	margin-top: 1.5em;
+}
+
+.current-head h2
+{
+	color: white;
+	font-family: "Open Sans";
+	font-weight: 100;
+	letter-spacing: -0.8px;
+	
+	margin-top: 10px;
+	margin-bottom: 3em;
+}
+
+/* Black podcast bubbles */
+.podcast-details
+{
+	display: inline-block;
+	position: relative;
+	clear: both;
+	//height: 250px;
+	width: 280px;
+	background-color: #002b30;
+	border-radius: 3px;
+	
+	vertical-align: bottom;
+	text-align: left;
+	
+	margin-bottom: 15px
+}
+
+/* bubble pointer */
+.podcast-details:after
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0.6255em 0.6255em 0;
+	border-color: #00252A transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-left: -0.625em;
+	bottom: -0.58em;
+	left: 50%;
+}
+
+.podcast-details h5, .podcast-details h4, .podcast-details p
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.podcast-details h5
+{
+	color: #FF66AD;
+	margin-bottom: 0px;
+	
+	font-family: "Open Sans";
+	text-transform: capitalize;
+	
+	font-size: 1em;
+	
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.podcast-details h4
+{
+	color: white;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+	font-weight: bold;
+	
+	margin-top: 0;
+	
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.podcast-details p
+{
+	color: white;
+	font-family: "Open Sans";
+	font-size: 1em;
+	font-weight: 200;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	margin-bottom: 0px;
+}
+
+.podcast-details .listen
+{
+	display: block;
+	font-family: "Open Sans";
+	color: white;
+	margin-bottom: 30px;
+	padding: 10px;
+	bottom: 20px;
+	float: right;
+}
+
+.pos-bottom
+{
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+	border-radius: 3px;
+
+}
+
+.pos-bottom p
+{
+	display: inline-block;
+	font-family: "Open Sans";
+	font-weight: bold;
+	vertical-align: middle;
+	
+	font-size: 1em;
+	
+	line-height: 30px;
+	
+	padding: 0;
+	padding-left: 10px;
+}
+
+.pos-bottom img
+{
+	position: relative;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	border: 2px solid white;
+	float: right;
+	
+	margin: 5px 10px 5px -7px;
+	vertical-align: middle;
+}
+
+/* Probably don't need, can remove. */
+.podcast-active
+{
+	height: 300px;
+	width: 500px;
+	background-color: white;
+}
+
+.podcast-dot
+{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-color: #FF66AD;
+	border: 2px solid white;
+	
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+	
+	margin-top: 10px;
+	z-index: 2;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-ms-border-radius: 10px;
+}
+
+.podcast-date
+{
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: white;
+}
+
+/*  Horizontal timeline for the podcasts to sit on. */
+.hor-time
+{
+	height: 5px;
+	position: absolute;
+	bottom: 2.3em;
+	width: 100%;
+	z-index: 0;
+
+	/* dots-horizontal.png in base64 */
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAAKCAYAAACaNQhdAAAAAXNSR0IArs4c6QAAAdVJREFUaAXtmz1PAkEQQOf2TGjwozFWmkhn+P8/hYYCE+1s0GhDAp6ZvYzL3nLHUBjO5G3Bftxksjwe2Rw3VGJtNruWyfRemuYyLlXVp2y+XmW1+rCQk3rywe8UYfAFX/Cln8BIvx9V3PF8/iC78CgXdTu3t7HdNVJ/P8ti8WJLrp58LSb4uXQRfMEXnyltFL6Mxpda9GQLk6fi8NAthlDJTm7kavou6/Wm3fWRV/IlQPBLLPpG+JLI4Eti0TfCl0RmBL6E+LNV984jbVHiwaI/bXmbxpIv0VIW8Es8uiN8yYngS86jO8OXnMiZfQm/zzzybeUzey6Srx6eeWI9MZbdE+uJIZ8RKHv4lUxsxcPGE0M+I1D28CuZ2IqHjSfmj/IFy0sPAQhAAAIQOIVAEK22OtY8MZbDE+uJIZ8RKHv4lUxsxcPGE0M+I1D28CuZ2IqHjSfmn+QLsVRXq4X6ml7Tcl5v01jyJVrwSywOjfAlp4IvOY/uDF9yImf2pY7VVXe3Tay20qf6+003p2W8y+Xb/vLgWKu1yNcigt+gKvEiviRG+JJY9I3wJZEZgS/pwNDyOK1wsAcyepulpz1/JEwf2NAIfvgy5Ef3Gr7gS9eJoflIffkBQyftGNdNq6IAAAAASUVORK5CYII=');
+	
+	background-size: 200px 5px;
+}
+
+/* dark headings */
+#current h1, #footer h3
+{
+	font-family: "Montserrat";
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+#current h2, #current h3, 
+{
+	font-family: "Open Sans";
+	font-weight: 100;
+	letter-spacing: -1px;
+	
+	margin-top: 0px;
+	margin-bottom: 40px;
+	color: white;
+}
+
+/* Vertically center the feature image and text */
+.vcenter 
+{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+/* ==== FOOTER ==== */
+
+
+.footer-bg
+{
+	background-color: #4A4A4A;
+}
+
+/* Horizontal rule styles. */
+.hr
+{
+	margin-top: 5em;
+	margin-bottom: 0.625em;
+	position: relative;
+	overflow: hidden;
+	//height: 5px;
+}
+
+.twotone-line
+{
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 50%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.twotone-line:before
+{
+	content: "";
+	position: absolute;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 200%;
+	left: 0;
+}
+
+.info-icon
+{
+	background-color: #4A4A4A;
+	border-radius: 3.125em;
+	padding: 0;
+	margin: -0.625em;
+	color: #00e1ff;
+	
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 
+			 	0px 0px 4px rgba(255, 225, 255, 0.5);
+}
+
+/* VA styles */
+img.we
+{
+	width: 4em;
+	height: 4em;
+	background-color: #002b30;
+	box-shadow: 0px 0px 0px 3px white;
+	margin: 4px;
+}
+
+
+.footer-column
+{
+	padding: 1.875em;
+	text-align: left;
+}
+
+.footer-column img
+{
+	margin: 5px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+#footer .blue-border
+{
+	display: block;
+	border-bottom: 1px solid #00e1ff;
+	margin-bottom: 30px;
+}
+
+#footer h3
+{
+	display: inline-block;
+	margin-bottom: 0;
+	border-bottom: 3px solid #00e1ff;
+}
+
+
+#footer ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+#footer ul li
+{
+	margin: 1em;
+	margin-top: 0;
+	margin-left: 1em;
+	font-family: "Open Sans";
+	
+	vertical-align: middle;
+	
+	font-size: 1em;
+	color: white;
+}
+
+#footer ul li:hover
+{
+	cursor: pointer;
+}
+
+#footer ul li:hover > .fa
+{
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+		 0px 0px 5px rgba(0, 225, 255, 0.5), 
+		 0px 0px 30px rgba(0, 225, 255, 0.7);
+			 
+	color: #00e1ff;
+	
+	cursor: pointer;
+}
+
+#footer ul li .fa:hover
+{
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+			 0px 0px 5px rgba(0, 225, 255, 0.5), 
+			 0px 0px 30px rgba(0, 225, 255, 0.7);
+			 
+	color: #00e1ff;
+}
+
+#footer ul li .fa
+{
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2);
+	margin-right: 1.25em;
+	vertical-align: middle;
+	
+	color: #002b30;
+}
+
+#footer p
+{
+	font-family: "Open Sans";
+	font-weight: 100;
+
+	letter-spacing: -0.5px;
+	
+	margin-top: 0px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.boldpink
+{
+	font-weight: 700;
+	color: #FF66AD;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==== Specific device styles ==== */
+
+
+/* Styles for hd */
+@media (max-width: 10000px) 
+{
+    
+}
+
+/* Styles for md */
+@media (max-width: 1199px) {
+	body
+	{
+		font-size: 12px;
+	}
+}
+
+/* Styles for sm */
+@media (max-width: 991px) 
+{
+	body
+	{
+		font-size: 11px;
+	}
+    
+    /* thinner podcasts for portrait tablets */
+	.podcast-details
+	{
+		width: 200px;
+	}
+}
+
+/* Styles for xs */
+@media (max-width: 767px) {
+    /* CSS goes here */
+    
+    body
+	{
+		font-size: 10px;
+	}
+	
+    .xs-hidden
+    {
+	    display: none;
+    }
+	
+	/* Fix up the padding/spacing on mobile */
+	.feature
+	{
+		padding: 0.2em;
+		overflow: hidden;
+	}
+	
+	#features .col-xs-12
+	{
+		text-align: left;
+	}
+	
+	#features .col-xs-12.text-centre-xs
+	{
+		text-align: center;
+	}
+	
+	#features h2
+	{
+		display: block;
+		margin-bottom: 1em;
+		margin-top: 0;
+		width: 100%;
+		padding: 0;
+	}
+	
+	.footer-column
+	{
+		padding-left: 2em;
+		padding-right: 2em;
+		
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+}
+
+
+/* ==== Timeline  ==== */
+
+#line-container
+{
+	display: inline-block;
+	width: 100%;
+	
+	/* background-image: url("../../Podcast/img/icons/timeline.png"); */
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAACWCAYAAAABv9LBAAAAAXNSR0IArs4c6QAAAXlJREFUaAXtVzFOw0AQtC+NJRpLEQUlEi9AIOyCJ9BRkLyCJ/gH/gB1aKig5QNIKGXadFCgSLY7KGxmIjmyfPY2NFgaS6u729m9Pc9tPEoQdJ4sy1xZlnew56qqPmDfHLmmn3gnPAjbRVEUp2EYPsHOW19/bJpmDbuN43hLbJ/MROfcG9bH/YSB9Vdd11fcYMajpGn6iopnA4FDriM4r6Moegj5Lkh8HIqyfDj+ggQsrSADWzpUvTACRiHmsfJ8NMIG5kze2TGj6M7hxd9HYQNgHiuvjBgLWs1wX5skSW5AwIkV2cVQdZ3n+f2fOozHDthqbDnu2K3QnxNvW5PYPpkTboCjXCJgAXuB6xP2w5Fr+om3Pwr49YgBMfCPGZBK2pfDbxo/gFJJm6cDCsKkklLJQz9oIgYmz4BU0r5CqaTNj4dKJfVf0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAxBj4BfOnfoocxRn5AAAAAElFTkSuQmCC');
+	
+	background-repeat: repeat-y;
+	background-size: 5px 50px;
+	background-position: 5.3em 0;
+	
+	padding-left: 0px;
+	padding-bottom: 30px;
+}
+#line-container:after
+{
+	content: "";
+	position: relative;
+	left: 4.95em;
+	top: 3em;
+	width: 14px;
+	height: 14px;
+	background-color: #f2f2f2;
+	border-radius: 7px;
+	
+	margin: 0;
+	padding: 0;
+	
+	display: inline-block;
+}
+	/* Styles for the inactive line */
+	#line-container .line
+	{
+		position: relative;
+		
+		padding: 10px;
+		padding-top: 15px;
+		padding-bottom: 10px;
+		padding-left: 5px;
+		
+		font-family: "Open Sans";
+		font-weight: 500;
+	}
+	
+		#line-container .line .details
+		{
+			display: inline-block;
+			float: left;
+		}
+	
+			/* TIME */
+			#line-container .line .details span.time
+			{
+				display: inline-block;
+				vertical-align: middle;
+				
+				color: white;
+				
+				width: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 0.3em;
+				
+				font-family: "Open Sans";
+				font-size: 0.8em;
+				font-weight: bold;
+				
+				padding: 0.3em;
+				padding-left: 0.8em;
+				padding-right: 0.8em;
+				
+				margin-right: 5px;
+			}
+			
+			/* Voice Actor Image */
+			#line-container .line .details img
+			{
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				width: 3.2em;
+				height: 3.2em;
+				
+				border-radius: 25px;
+				
+				box-shadow: 0px 0px 0px 4px #f2f2f2;
+				background-color: white;
+			}
+			
+		#line-container .line .text
+		{
+			display: table-cell;
+			margin-left: 30px;
+		}
+		
+			/* Speech bubble */
+			#line-container .line .text p.speech
+			{				
+				margin: 0;	
+				
+				position: relative;
+				margin-left: 1em;
+				padding-left: 1em;
+				padding-right: 1em;
+				border-radius: 0.5em;
+				
+				line-height: 3em;
+				letter-spacing: -0.5px;
+				
+				background-color: #f2f2f2;
+				color: #002b30;
+				cursor: pointer;
+				
+				transition: background-color 0.2s;
+				
+				font-size: 1em;
+				/* note: hides the comment nib, will need to do images for that.; */
+
+				overflow: visible;
+				z-index: 1;
+			}
+			
+			/* testing for clickbubble */
+			#line-container .line .text p.speech span.above
+			{
+				z-index: 100;
+			}
+			
+			#line-container .line .text p.speech:before
+			{
+				content: "";
+				position: absolute;
+				left: -10px;
+				top: 1.1em;
+				width: 0;
+				height: 0;
+				
+				font-size: 100%;
+				
+				border: 5px solid;
+				border-radius: 1px;
+				
+				line-height: 0;
+				
+				border-color: transparent #f2f2f2 transparent transparent;
+				
+				transition: border-color 0.2s;
+			}
+			
+
+/* ==== Background colours ==== */
+
+
+.pink-bg
+{
+	background-color: pink;
+}
+
+.blue-bg
+{
+	background-color: #00e1ff;
+}
+
+.green-bg
+{
+	background-color: green;
+}
+
+.gray-bg
+{
+	background-color: gray;
+}
+
+.yellow-bg
+{
+	background-color: yellow;
+}
+
+.darker-bg
+{
+	background-color: #00252A;
+}
+
+.darkest-bg
+{
+	background-color: #00252A;
+}

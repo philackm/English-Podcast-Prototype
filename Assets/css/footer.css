@@ -1,0 +1,13 @@
+/* -footer- */
+#footer
+{
+	margin-top: 10em;
+	margin-bottom: 10em;
+	
+	color: #f1f1f1;
+}
+
+#footer h1
+{
+	text-shadow: 1px 1px 1px white, -1px -1px 0px rgba(0, 0, 0, 0.15);
+}

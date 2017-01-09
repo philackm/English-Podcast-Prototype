@@ -1,0 +1,16 @@
+/* General font styles */
+
+/* Font-sizes to overwrite bootstrap/agent styles so we can use em */
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+
+/* h1 styles */
+h1, h2
+{
+	font-family: "Montserrat";
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	
+	margin-top: 0;
+}

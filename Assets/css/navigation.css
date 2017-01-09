@@ -1,0 +1,230 @@
+/* -navigation- */
+#main-nav
+{
+	padding: 0px;
+	margin: 0;
+	list-style-type: none;
+	font-size: 2em;
+	
+	background-color: #4a4a4a;
+	border-radius: 4px;
+	
+	font-size: 1em;
+	
+	background-color: transparent;
+}
+
+#main-nav a,
+#main-nav a:link,
+#main-nav a:visited,
+#main-nav a:hover,
+#main-nav a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+#main-nav #nav-progress-bg
+{
+	height: 0.2em;
+	background-color: #3a3a3a;
+	width: 100%;
+}
+
+#main-nav #nav-progress
+{
+	height: 0.2em;
+	background-color: #00FFA6;
+	width: 0%;
+}
+
+#main-nav li
+{
+	line-height: 2em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 2em;
+	
+		background-color: #4a4a4a;
+}
+
+#main-nav li#secondary-play-button
+{
+	background-color: #00e1ff;
+	color: white;
+	margin: 0;
+	padding: 0;
+	
+	background: -webkit-linear-gradient(#00e1ff 0%, #00d8f5 100%);
+	
+	border-radius: 3px 3px 0px 0px;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+	
+
+}
+
+#main-nav li#secondary-play-button.active{
+	animation: fallin 0.5s;
+	-webkit-animation: fallin 0.5s;
+	
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: backwards;
+}
+
+@keyframes fallin{
+	from
+	{
+		opacity: 0;
+		height: 0;
+		transform: translateY(-100%);
+	}
+	to
+	{
+		opacity: 1;
+		height: 100%;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes fallin{
+	from
+	{
+		opacity: 0;
+		-webkit-transform: translateY(-100%);
+	}
+	to
+	{
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+/* light, neon style */
+#main-nav li.active
+{
+	color: #00e1ff;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+				 0px 0px 5px rgba(0, 225, 255, 0.5), 
+				 0px 0px 30px rgba(0, 225, 255, 0.7);
+}
+
+#main-nav li /* inactive */
+{
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+#main-nav li:hover
+{
+	transition: text-shadow 0.3s, 
+				color 0.3s;
+	
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+				 0px 0px 5px rgba(0, 225, 255, 0.5), 
+				 0px 0px 30px rgba(0, 225, 255, 0.7);
+	
+	color: #00e1ff;
+	cursor: pointer;
+}
+
+/* Animations for "attention" */
+#main-nav li.attention
+{
+	animation: pulse-attention 5s;
+	-webkit-animation: pulse-attention 5s;
+	
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+/*
+	colors we can use.	
+	green: #00FFA6, rgba(0, 255, 167, 1);
+	blue: #00e1ff, rgba(0, 225, 255, 1)
+*/
+
+/* Animation for the pulsating "give me your attention" when something is new. */
+@keyframes pulse-attention{
+	
+	0%
+	{
+		color: rgba(0, 255, 167, 0.2);
+	}
+	50%
+	{
+		color: #00FFA6;
+		text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+					 0px 0px 5px rgba(0, 255, 167, 0.5),
+					 0px 0px 30px rgba(0, 255, 167, 0.5);
+	}
+	100%
+	{
+		color: rgba(0, 255, 167, 0.2);
+	}
+}
+
+@-webkit-keyframes pulse-attention{
+	
+	0%
+	{
+		color: rgba(0, 255, 167, 0.2);
+	}
+	50%
+	{
+		color: #00FFA6;
+		text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.15), 
+					 0px 0px 5px rgba(0, 255, 167, 0.5),
+					 0px 0px 30px rgba(0, 255, 167, 0.5);
+	}
+	100%
+	{
+		color: rgba(0, 255, 167, 0.2);
+	}
+}
+
+/* first child and first-of-type explanation */
+/* 
+   first-child:
+	Select the first child of its parent
+	if and only if it's an h1 element.
+	<div>
+		<p>
+		<h1> // want this guy
+		<h1>
+	</div>
+	div h1:first-child will not select this h1, because it is not the first child.
+   
+   first-of-type:
+   	will select if it is the first of its type
+   	<div>
+		<p>
+		<h1> // first h1 tag, will select it
+		<h1>
+	</div>
+	div h1:first-of-type will select the one we want.
+*/
+
+#main-nav a:last-child li
+{
+	border-radius: 0px 0px 5px 5px;
+}
+
+#main-nav a:first-of-type li
+{
+	border-radius: 5px 5px 0px 0px;
+}
+
+/* remove the border radius when the play button is active */
+/* '+' is the sibling selector */
+#main-nav #secondary-play-button.active + a:first-of-type li
+{
+	border-radius: 0;
+}

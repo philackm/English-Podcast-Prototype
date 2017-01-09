@@ -1,0 +1,183 @@
+/* -sidebar- */
+#vocab
+{
+	padding: 0 !important;
+	
+	border-left: 1px solid rgba(0, 0, 0, 0.04);
+	box-sizing: border-box;
+}
+
+/* hint in the sidebar to click words */
+#vocab #hint
+{
+	line-height: 1.8em;
+}
+
+#vocab #hint .hint
+{
+	font-size: 1.0em;
+	display: inline-block;
+	
+	background-color: #FF7990;
+	border-radius: 0.2em;
+
+	margin-top: 1.8em;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 1em;
+
+	padding: 0.3em;
+	//padding-bottom: 0.1em;
+	
+	letter-spacing: 0.5px;
+	
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#vocab #hint p
+{
+	display: inline-block;
+	font-weight: bold;
+	font-family: "Open Sans";
+	color: #4a4a4a;
+	margin-left: 0;
+}
+
+/* Words that pop in. */
+#vocab div.word-container
+{
+	display: table;
+	opacity: 0; /* start off invisible to fix a weird animation thing in safari */
+}
+
+#vocab div.word-container.wordin
+{
+	position: relative;
+	z-index: 10;
+	
+	-webkit-animation: wordin 0.2s;
+	animation: wordin 0.2s;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}	
+	@-webkit-keyframes wordin
+	{
+		from 
+		{
+			opacity: 0;
+			-webkit-transform: translateX(100%);
+		}
+		to 
+		{
+			opacity: 1;
+			-webkit-transform: translateX(0);
+		}
+	}
+	
+	@keyframes wordin
+	{
+		from 
+		{
+			opacity: 0;
+			transform: translateX(100%);
+		}
+		to 
+		{
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	
+#vocab div.word-container.wordout
+{
+	position: relative;
+	z-index: 10;
+	
+	-webkit-animation: wordout 0.2s;
+	animation: wordout 0.2s;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+	@-webkit-keyframes wordout
+	{
+		from 
+		{
+			opacity: 0;
+			height: 100%;
+		}
+		to 
+		{
+			opacity: 1;
+			height: 0;
+		}
+	}
+	
+	@keyframes wordout
+	{
+		from 
+		{
+			opacity: 0;
+			height: 100%;
+		}
+		to 
+		{
+			opacity: 1;
+			height: 0;
+		}
+	}
+
+#vocab div.word-container div.number-column
+{
+	display: table-cell;
+}
+
+#vocab div.word-container div.number-column h1
+{
+	font-size: 1.0em;
+	border: 0.2em solid #00e1ff;
+	background-color: #00e1ff;
+	color: white;
+	
+	border-radius: 10em;
+	
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	
+	margin: 0;
+	margin-left: 0.5em;
+	margin-top: 1.3em;
+	
+	font-family: "Open Sans";
+	font-weight: bold;
+}
+
+#vocab div.word-container div.word
+{
+	display: table-cell;
+	padding: 0.5em;
+	
+	font-size: 0.85em;
+	
+	margin-bottom: 0.1em;
+	
+	vertical-align: top;
+}

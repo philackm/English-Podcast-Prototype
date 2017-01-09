@@ -1,0 +1,533 @@
+#series-menu.dropdown
+{	
+	display: none; /* Start hidden */
+	position: absolute;
+
+	z-index: 100;
+	
+	width: 35em;
+	
+	color: #002b30;
+	
+	border-radius: 1px;
+	border: 1px solid #00e1ff;
+	border-width: 1px 1px 1px 1px;
+	background-color: white;
+	
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	
+	overflow: hidden;
+	
+	font-family: "Open Sans";
+}
+
+#series-menu.dropdown.dropdown-active
+{
+	display: inline-block;
+}
+
+
+/* Heading for the menu */
+#series-menu.dropdown .dropdown-header
+{
+	font-family: "Montserrat";
+	background-color: #00e1ff;
+	color: white;
+	padding: 0.5em;
+}
+
+#series-menu.dropdown .dropdown-header h1
+{
+	font-size: 1.5em;
+	margin: 0 !important;
+}
+
+
+/* Single item in the menu */
+#series-menu.dropdown .page-item
+{
+	padding: 0.5em;
+}
+
+#series-menu.dropdown .page-item:hover
+{
+	background-color: rgba(0, 225, 255, 0.15);
+	cursor: pointer;
+}
+
+#series-menu.dropdown .page-item-active, .dropdown .page-item-active:hover
+{
+	color: white;
+	background-color: #00e1ff;
+}
+
+#series-menu.dropdown .page-item h1
+{
+	font-size: 1em;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#series-menu.dropdown .page-item p
+{
+	font-family: "Open Sans";
+	font-size: 1em;
+	margin: 0;
+}
+
+#series-menu.dropdown .page-item-icon
+{
+	font-size: 0.83em;
+	font-family: "Montserrat";
+	padding: 0;
+	margin-top: 0;
+	margin-right: 0.5em;
+}
+
+#series-menu.dropdown .light /* Used for the series number in the heading */
+{
+	color: rgba(0, 44, 49, 0.40);
+
+}
+
+#series-menu.dropdown .page-item-active .light
+{
+	color: white; /* When that series item is currently active, we want it to be white or else it looks bad */
+}
+
+
+/* Series pages & page navigation */
+#series-menu.dropdown .bottom
+{
+	height: 30px;
+	
+	text-align: center;
+	line-height: 30px;
+}
+#series-menu.dropdown .bottom
+{
+	width: 100%;
+	
+	background-color: rgba(255, 255, 255, 0.90);
+}
+
+#series-menu.dropdown .bottom .active-circle, .dropdown .bottom .inactive-circle
+{
+	display: inline-block;
+	margin: 0px 2px;
+		
+	border-radius: 50%;
+	vertical-align: middle;
+
+	cursor: pointer;
+}
+
+#series-menu.dropdown .bottom .active-circle
+{
+	height: 9px;
+	width: 9px;
+	
+	background-color: #002b30;
+	border-color: #002b30;
+	//border: 1px solid #002b30; /* Have the active one look a little bit bigger */
+	
+	transition: height 1s;
+}
+
+#series-menu.dropdown .bottom .inactive-circle
+{
+	height: 7px;
+	width: 7px;
+	
+	background-color: transparent;
+	border-color: #002b30;
+	border: 1px solid #002b30;
+	
+	transition: height 1s;
+}
+
+#series-menu.dropdown .bottom .go-left, .dropdown .bottom .go-right
+{
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	
+	padding: 0px 10px;
+	
+	font-size: 18px;
+	cursor: pointer;
+}
+#series-menu.dropdown .bottom .go-left
+{
+	float: left;
+}
+#series-menu.dropdown .bottom .go-right
+{
+	float: right;
+}
+
+#series-menu.dropdown .disabled{
+	opacity: 0.1;
+	pointer-events: none;
+}
+
+
+/* MENU ANIMATIONS */
+#series-menu.dropdown.dropdown-active
+{
+	animation: slidein 0.2s;
+	-webkit-animation: slidein 0.2s;
+		
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slidein
+{
+	from
+	{
+		opacity: 0.5;
+		transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+	}
+	to
+	{
+		opacity: 1;
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes slidein
+{
+	from
+	{
+		opacity: 0.5;
+		transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+	}
+	to
+	{
+		opacity: 1;
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+}
+
+#series-menu.dropdown .bottom .active-circle
+{
+	animation: page-switch 0.2s;
+	-webkit-animation: page-switch 0.2s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes page-switch
+{
+	0%
+	{
+		opacity: 1;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	80%
+	{
+		opacity: 1;
+		transform: scale(1.5,1.5);
+		-webkit-transform: scale(1.5,1.5);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: scale(1.1,1.1);
+		-webkit-transform: scale(1.1,1.1);
+	}
+}
+
+@-webkit-keyframes page-switch
+{
+	0%
+	{
+		opacity: 1;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	80%
+	{
+		opacity: 1;
+		transform: scale(1.5,1.5);
+		-webkit-transform: scale(1.5,1.5);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: scale(1.0,1.0);
+		-webkit-transform: scale(1.1,1.1);
+	}
+}
+
+/* Slide in from left to right. */
+#series-menu.dropdown .page-item.enter-from-left
+{
+	animation: leftright 0.2s;
+	-webkit-animation: leftright 0.2s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+}
+
+@keyframes leftright
+{
+	0%
+	{
+		opacity: 0.2;
+		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes leftright
+{
+	0%
+	{
+		opacity: 0.2;
+		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
+	}
+}
+
+/* Slide in from right to left. */
+#series-menu.dropdown .page-item.enter-from-right
+{
+	animation: rightleft 0.2s;
+	-webkit-animation: rightleft 0.2s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+
+@keyframes rightleft
+{
+	0%
+	{
+		opacity: 0.2;
+		transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes rightleft
+{
+	0%
+	{
+		opacity: 0.2;
+		transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
+	}
+}
+
+/* Slide in from left to right. */
+#series-menu.dropdown .page-item.exit-to-right
+{
+	animation: fadeout-to-right 0.2s;
+	-webkit-animation: fadeout-to-right 0.2s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+}
+
+@keyframes fadeout-to-right
+{
+	0%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+	50%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+@-webkit-keyframes fadeout-to-right
+{
+	0%
+	{
+		opacity: 1;
+		-webkit-transform: translateX(0%);
+	}
+	50%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+	}
+}
+
+/* Slide in from left to right. */
+#series-menu.dropdown .page-item.exit-to-left
+{
+	animation: fadeout-to-left 0.2s;
+	-webkit-animation: fadeout-to-left 0.2s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+	
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+}
+
+@keyframes fadeout-to-left
+{
+	0%
+	{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+	50%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+}
+
+@-webkit-keyframes fadeout-to-left
+{
+	0%
+	{
+		opacity: 1;
+		-webkit-transform: translateX(0%);
+	}
+	50%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 0;
+		-webkit-transform: translateX(-100%);
+	}
+}
+
+/* Delayed entrance */
+/* Only delay when they enter. */
+#series-menu.dropdown .page-item.enter-from-right.item-1, #series-menu.dropdown .page-item.enter-from-left.item-1
+{
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+}
+
+#series-menu.dropdown .page-item.enter-from-right.item-2, #series-menu.dropdown .page-item.enter-from-left.item-2
+{
+	animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
+}
+
+#series-menu.dropdown .page-item.enter-from-right.item-3, #series-menu.dropdown .page-item.enter-from-left.item-3
+{
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;	
+}
+
+#series-menu.dropdown .page-item.enter-from-right.item-4, #series-menu.dropdown .page-item.enter-from-left.item-4
+{
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+
+/* No delay on exit. */
+#series-menu.dropdown .page-item.exit-to-right.item-1, #series-menu.dropdown .page-item.exit-to-left.item-1
+{
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+}
+
+#series-menu.dropdown .page-item.exit-to-right.item-2, #series-menu.dropdown .page-item.exit-to-left.item-2
+{
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+}
+
+#series-menu.dropdown .page-item.exit-to-right.item-3, #series-menu.dropdown .page-item.exit-to-left.item-3
+{
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+}
+
+#series-menu.dropdown .page-item.exit-to-right.item-4, #series-menu.dropdown .page-item.exit-to-left.item-4
+{
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+}
+
+

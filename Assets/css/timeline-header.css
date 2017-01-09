@@ -1,0 +1,383 @@
+/* TIMELINE HEADER */
+#podcast-info
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	z-index: 1;
+		
+	overflow: hidden;
+	
+	border-radius: 5px 0px 0px 0px;
+}
+
+/* Because the background img is just an img tag, we need to wrap everything. */
+#podcast-info .padding
+{
+	padding: 4.5em;
+	padding-top: 2em;
+	padding-bottom: 0;
+}
+
+#podcast-info img.background
+{
+	display: inline-block;
+	position: absolute;
+	width: 500px;
+	
+	z-index: -1;
+	background-color: black;
+	width: 100%;
+	min-height: 100%;
+}
+
+#podcast-info:after /* Dark overlay */
+{
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* AUDIO CONTROLS */
+	#podcast-info h1, #podcast-info h2, #podcast-info p, .controls
+	{		
+		letter-spacing: -1px;
+		text-shadow: 0px 2px 4px black;
+	}
+	
+	/* Heading & Summary */
+	#podcast-info h2
+	{
+		font-size: 1.2em;
+		
+		color: #cdb7b7;
+		font-weight: 400;
+		
+		margin-bottom: 0;
+	}
+	
+	#podcast-info h1
+	{
+		font-size: 2em;
+		
+		color: #ffffff;
+		font-weight: 700;
+		line-height: 0.8em;
+		
+		padding: 0;
+		margin-top: 0;
+	}
+	
+	#podcast-info p
+	{
+		color: #ffffff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.2em;
+		
+		letter-spacing: -0.5px;
+		
+		line-height: 1.2em;
+		text-align: justify;
+	}
+	
+	#podcast-info .series-number
+	{
+		display: inline-block;
+	}
+	
+	#podcast-info .series-number:hover
+	{
+		color: white;
+		cursor: pointer;
+	}
+	
+	/* Player controls and time labels */
+	#podcast-info #html-audio-controls.controls
+	{
+		display: inline-block;
+
+		width: 100%;
+		height: 100%;
+		
+		vertical-align: middle;
+		color: white;
+		
+		/* background-image: url("../../Podcast/img/icons/timeline.png"); */
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAACWCAYAAAABv9LBAAAAAXNSR0IArs4c6QAAAXlJREFUaAXtVzFOw0AQtC+NJRpLEQUlEi9AIOyCJ9BRkLyCJ/gH/gB1aKig5QNIKGXadFCgSLY7KGxmIjmyfPY2NFgaS6u729m9Pc9tPEoQdJ4sy1xZlnew56qqPmDfHLmmn3gnPAjbRVEUp2EYPsHOW19/bJpmDbuN43hLbJ/MROfcG9bH/YSB9Vdd11fcYMajpGn6iopnA4FDriM4r6Moegj5Lkh8HIqyfDj+ggQsrSADWzpUvTACRiHmsfJ8NMIG5kze2TGj6M7hxd9HYQNgHiuvjBgLWs1wX5skSW5AwIkV2cVQdZ3n+f2fOozHDthqbDnu2K3QnxNvW5PYPpkTboCjXCJgAXuB6xP2w5Fr+om3Pwr49YgBMfCPGZBK2pfDbxo/gFJJm6cDCsKkklLJQz9oIgYmz4BU0r5CqaTNj4dKJfVf0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAxBj4BfOnfoocxRn5AAAAAElFTkSuQmCC');
+		background-repeat: repeat-y;
+		background-position: 1.4em 0px;
+		background-size: 5px 4.166em;
+		
+		padding-bottom: 1.4em;
+	}
+
+	#podcast-info #html-audio-controls.controls #main-play-button
+	{
+		display: inline-block;
+		background-color: #00E1FF;
+		border-radius: 25px;
+		
+		position: relative;
+		
+		width: 3.2em;
+		height: 3.2em;
+		
+	}
+	#podcast-info #html-audio-controls.controls #main-play-button:after
+	{
+		content: "";
+		display: inline-block;
+		
+		/* background-image: url("../../Podcast/img/icons/play_icon.png"); */
+		background-image: url('data:image/png;base64,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');
+
+		background-size: contain;
+		background-repeat: no-repeat;
+		
+		width: 1.4em;
+		height: 1.4em;
+		
+		position: absolute;
+		left: 1.0em;
+		top: 0.95em;
+	}
+	#podcast-info #html-audio-controls.controls #main-play-button.playing:after
+	{
+		/* background-image: url("../../Assets/SVG/pause-icon.svg"); */
+		background-image: url('data:image/png;base64,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');
+	
+		width: 1.5em;
+		height: 1.5em;
+		
+		top: 0.9em;
+		left: 0.85em;
+	}
+	
+	#podcast-info #html-audio-controls.controls #stats
+	{
+		position: relative;
+		margin-top: 0;
+		margin-left: 1em;
+
+		display: inline-block;
+		vertical-align: top;
+		
+		width: 80%;
+		box-sizing: border-box;
+	}
+	
+		#podcast-info #html-audio-controls.controls #stats .current-label
+		{
+			display: inline-block;
+			font-size: 2.33em;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			color: white;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats .separator
+		{
+			display: inline-block;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats .duration-label
+		{
+			display: inline-block;
+			font-size: 1.166em;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 400;
+			letter-spacing: 0;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats #progress-bar
+		{
+			position: relative;
+			display: block;
+			
+			width: 100%;
+			max-width: 300px;
+			height: 1em;
+			background-color: #002B30;
+			border-radius: 3px;
+			
+			cursor: pointer;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats #progress-bar #completion-bar
+		{
+			position: absolute;
+			
+			width: 0%; /* start off empty */
+			height: 1em;
+			background-color: #00FFA6;
+			display: block;
+			border-radius: 3px;
+			
+			transition: width 0.2s;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats #progress-bar #buffered-bar
+		{
+			position: absolute;
+			
+			width: 0%;
+			height: 1em;
+			background-color: #444444;
+			border-radius: 3px;
+		}
+		
+		#podcast-info #html-audio-controls.controls #stats #progress-tooltip
+		{
+			position: fixed;
+			
+			padding: 0.416em;
+			
+			z-index: 100;
+			font-family: "Open Sans";
+			font-style: italic;
+			font-size: 1em;
+			
+			background-color: #002B30;
+			border-radius: 5px;
+			
+			text-shadow: 0px 0px 0px black;
+			letter-spacing: -0.5px;
+			
+			transition: opacity 0.5s;
+		}
+
+	
+/* -podcast settings */
+
+#podcast-settings
+{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	line-height: 3em;
+	padding: 0.2em;
+	padding-left: 9.0em;
+	
+	font-family: "Open Sans";
+	font-size: 1em;
+	
+	/* background-image: url("../../Podcast/img/icons/timeline.png"); */
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAACWCAYAAAABv9LBAAAAAXNSR0IArs4c6QAAAXlJREFUaAXtVzFOw0AQtC+NJRpLEQUlEi9AIOyCJ9BRkLyCJ/gH/gB1aKig5QNIKGXadFCgSLY7KGxmIjmyfPY2NFgaS6u729m9Pc9tPEoQdJ4sy1xZlnew56qqPmDfHLmmn3gnPAjbRVEUp2EYPsHOW19/bJpmDbuN43hLbJ/MROfcG9bH/YSB9Vdd11fcYMajpGn6iopnA4FDriM4r6Moegj5Lkh8HIqyfDj+ggQsrSADWzpUvTACRiHmsfJ8NMIG5kze2TGj6M7hxd9HYQNgHiuvjBgLWs1wX5skSW5AwIkV2cVQdZ3n+f2fOozHDthqbDnu2K3QnxNvW5PYPpkTboCjXCJgAXuB6xP2w5Fr+om3Pwr49YgBMfCPGZBK2pfDbxo/gFJJm6cDCsKkklLJQz9oIgYmz4BU0r5CqaTNj4dKJfVf0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAlBmQStq3J5W0+fFQqaRU0msKOcTAxBj4BfOnfoocxRn5AAAAAElFTkSuQmCC');
+	background-repeat: repeat-y;
+	background-position: 5.9em 0px;
+	background-size: 5px 4.166em;
+}
+
+#podcast-settings .setting-wrapper
+{
+	display: inline-block;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+	height: 1.8em;
+	line-height: 1.8em;
+	border-radius: 5px 5px 5px 5px;
+	margin-right: 0.5em;
+	
+	cursor: pointer;
+}
+
+/* Disables text selection */
+.noselect 
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#podcast-settings .setting-wrapper .setting, #podcast-settings .setting-wrapper .last, #podcast-settings .setting-wrapper .mid
+{	
+	min-height: 1.8em;
+	line-height: 1.8em;
+	
+	display: inline-block;
+	
+	background-color: #00E1FF;
+	box-shadow: inset 0px 0px 0px 2px #00E1FF; /* fake the borders using a shadow so we can centre the tick */
+				
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+	letter-spacing: -0.5px;
+	
+	vertical-align: middle;
+	font-size: 1.0em;
+}
+
+#podcast-settings .setting-wrapper .setting
+{
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 1.0em;
+	
+	border-radius: 5px 0px 0px 5px;
+}
+
+#podcast-settings .setting-wrapper .last
+{
+	min-width: 2.2em;
+	
+	border-radius: 0px 5px 5px 0px;
+	
+	text-align: center;	
+	font-weight: bold;
+	
+	background-color: transparent;
+}
+
+#podcast-settings .setting-wrapper .mid
+{
+	min-width: 2.2em;
+
+	background-color: transparent;
+	
+	border-radius: 0px 0px 0px 0px;
+	
+	/* border: 2px solid pink */
+	/* box-shadow: inset 0px 0px 0px 1px #00E1FF */; 
+	
+	text-align: center;
+	margin-right: -2px;
+	
+	font-weight: bold;
+
+}
+
+#podcast-settings .setting-wrapper .last.selected, #podcast-settings .setting-wrapper .mid.selected
+{
+	background-color: #00e1ff;
+}
+
+#podcast-settings .setting-wrapper .check .fa
+{
+	line-height: 1.8em;
+}
+
+#podcast-settings .setting-wrapper.inactive
+{
+	opacity: 0.5;
+}
+
+
+/* no rounded corners on mobile */
+@media (max-width: 767px)
+{		
+	#podcast-info
+	{
+		border-radius: 0px 0px 0px 0px;
+	}
+}
+

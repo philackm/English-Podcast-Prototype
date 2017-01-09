@@ -1,0 +1,23 @@
+.language-selector-dropdown
+{
+	width: 2.25em;
+	height: 1.5em;
+	
+	background-color: transparent;
+	border: none;
+	margin-top: 1em;
+	display: none;
+}
+
+.language-selector-dropdown.dropdown-active{
+	display: inline-block;
+}
+
+.language-selector-dropdown img
+{
+	width: 2.25em;
+	height: 1.5em;
+	
+	margin: 0;
+	padding: 0;
+}

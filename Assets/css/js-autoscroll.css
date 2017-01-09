@@ -1,0 +1,37 @@
+#autoscroll-info
+{
+	position: fixed;
+	top: 2em;
+	right: 2em;
+	
+	width: auto;
+	color: white;
+	
+	padding: 1.5em;
+	
+	font-family: "Open Sans";
+	font-size: 1em;
+	
+	background-color: rgba(0, 0, 0, 0.8);
+	
+	border-radius: 0.5em;
+	
+	z-index: 5;
+}
+
+#autoscroll-info button
+{
+	background-color: transparent;
+	border: 2px solid white;
+	width: 100%;
+	border-radius: 1em;
+	padding: 0.5em;
+	
+	outline: none;
+}
+
+#autoscroll-info button:active
+{
+	background-color: white;
+	color: black;
+}
